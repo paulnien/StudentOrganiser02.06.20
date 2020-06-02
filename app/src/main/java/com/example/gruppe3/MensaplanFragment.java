@@ -1,18 +1,15 @@
 package com.example.gruppe3;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-public class SecondFragment extends Fragment {
+public class MensaplanFragment extends Fragment {
 
     @Override
     public View onCreateView(
@@ -31,7 +28,7 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view)
             {
-                NavHostFragment.findNavController(SecondFragment.this)
+                NavHostFragment.findNavController(MensaplanFragment.this)
                         .navigate(R.id.action_Mensa_to_Start);
             }
         });

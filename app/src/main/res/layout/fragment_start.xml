@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".StartFragment">
 
     <TextView
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first_next"
+        app:layout_constraintBottom_toTopOf="@id/button_StartFragment_to_MensaplanFragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_first_next"
+        android:id="@+id/button_StartFragment_to_MensaplanFragment"
         android:layout_width="138dp"
         android:layout_height="52dp"
         android:text="@string/next1"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@id/textview_first" />
 
     <Button
-        android:id="@+id/button_second_next"
+        android:id="@+id/button_StartFragment_to_KalenderFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next2"
@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.638" />
 
     <Button
-        android:id="@+id/button_third_next"
+        android:id="@+id/button_StartFragment_to_StundeplanFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next3"

@@ -7,24 +7,24 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.gruppe3.FirstFragment"
+        android:name="com.example.gruppe3.StartFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_start">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_StartFragment_to_MensaplanFragment"
             app:destination="@id/SecondFragment" />
         <action
-            android:id="@+id/action_FirstFragment_to_ThirdFragment"
+            android:id="@+id/action_StartFragment_to_KalenderFragment"
             app:destination="@id/ThirdFragment" />
         <action
-            android:id="@+id/action_FirstFragment_to_ForthFragment"
+            android:id="@+id/action_StartFragment_to_StundenplanFragment"
             app:destination="@id/ForthFragment" />
 
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.gruppe3.SecondFragment"
+        android:name="com.example.gruppe3.MensaplanFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/ThirdFragment"
-        android:name="com.example.gruppe3.ThirdFragment"
+        android:name="com.example.gruppe3.KalenderFragment"
         android:label="Third Fragment"
         tools:layout="@layout/fragment_third">
 
@@ -46,7 +46,7 @@
 
     <fragment
         android:id="@+id/ForthFragment"
-        android:name="com.example.gruppe3.ForthFragment"
+        android:name="com.example.gruppe3.StundenplanFragment"
         android:label="Forth Fragment"
         tools:layout="@layout/fragment_forth">
 
