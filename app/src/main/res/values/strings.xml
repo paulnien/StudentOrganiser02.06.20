@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Gruppe3</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Mensa</string>
+    <string name="second_fragment_label">Stundenplan</string>
+    <string name="next">Next</string>
+    <string name="previous2">Zurück</string>
+    <string name="previous3">Zurück</string>
+
+    <string name="hello_first_fragment">Willkommen in unserer Kalender App</string>
+    <string name="hello_second_fragment">Mensa</string>
+    <string name="next1">Mensa</string>
+    <string name="next2">Kalender</string>
+    <string name="next3">Stundenplan</string>
+    <string name="logo">w_hs_pagelogo</string>
+    <string name="hello_third_fragment">Kalender</string>
+    <string name="link1">www.w-hs.de</string>
+    <string name="link2"><a href="https://www.google.de">www.google.de</a></string>
+    <string name="previous4">Zurück</string>
+    <string name="hello_forth_fragment">Stundenplan</string>
+    <string name="Mensaplan">Mensaplan</string>
+</resources>
