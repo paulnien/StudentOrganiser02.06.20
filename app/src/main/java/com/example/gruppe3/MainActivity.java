@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
         //return super.onOptionsItemSelected(item);
     }
 
-    public void calendar_input (String title, String description, String location, String eventTimeZone, long calID, int start_year, int start_month, int start_date, int start_hour, int start_minute, int end_year, int end_month, int end_date, int end_hour, int end_minute, boolean allDay )
+    public void calendar_input (String title, String description, String location, String eventTimeZone, long calID, int start_year, int start_month, int start_date, int start_hour, int start_minute, int end_year, int end_month, int end_date, int end_hour, int end_minute, boolean allDay, boolean weekly)
     {
-        //insert methoden aufruf:   calendar_input("Allday test123", "Testeintrag allday", "testlocation", "America/Los_Angeles", 6, 2020, 7, 20, 14, 15, 2020,7,20, 14,45, true);
+        //insert methoden aufruf:   calendar_input("Allday test123", "Testeintrag allday", "testlocation", "America/Los_Angeles", 6, 2020, 7, 20, 14, 15, 2020,7,20, 14,45, true, true);
         long startMillis = 0;
         long endMillis = 0;
         int allday=0;
@@ -130,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
         values.put(CalendarContract.Events.CALENDAR_ID, calID);         // Calendar ID 6 für Events
         values.put(CalendarContract.Events.EVENT_TIMEZONE, eventTimeZone);
         values.put(CalendarContract.Events.ALL_DAY, allday);
+        if(weekly)
+        {
+            values.put(CalendarContract.Events.RRULE, "FREQ=WEEKLY");
+        }
+
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) // App-Permission in den Einstellungen ändern
         {
             return;
