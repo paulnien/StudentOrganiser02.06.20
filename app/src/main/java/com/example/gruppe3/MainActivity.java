@@ -90,18 +90,33 @@ public class MainActivity extends AppCompatActivity {
         //return super.onOptionsItemSelected(item);
     }
 
-
-    public void calendar_input (String title, String description, String eventTimeZone, long calID, int start_year, int start_month, int start_date, int start_hour, int start_minute, int end_year, int end_month, int end_date, int end_hour, int end_minute )
+    public void calendar_input (String title, String description, String location, String eventTimeZone, long calID, int start_year, int start_month, int start_date, int start_hour, int start_minute, int end_year, int end_month, int end_date, int end_hour, int end_minute, boolean allDay )
     {
-        //insert methoden aufruf: calendar_input("Methoden test123", "Dies ist ein testeintrag!", "America/Los_Angeles", 6, 2020, 5, 28, 14, 15, 2020,5,28, 14,45);
-        // ganztägige Events einfügen?; Notifications einfügen; andere IDs herausfinden
+        //insert methoden aufruf:   calendar_input("Allday test123", "Testeintrag allday", "testlocation", "America/Los_Angeles", 6, 2020, 7, 20, 14, 15, 2020,7,20, 14,45, true);
         long startMillis = 0;
         long endMillis = 0;
+        int allday=0;
         Calendar beginTime = Calendar.getInstance();
-        beginTime.set(start_year, (start_month-1), start_date, start_hour, start_minute);
+        if(allDay)
+        {
+            beginTime.set(start_year, (start_month-1), start_date, 0,0);
+            allday=1;
+        }
+        else
+        {
+            beginTime.set(start_year, (start_month-1), start_date, start_hour, start_minute);
+        }
         startMillis = beginTime.getTimeInMillis();
+
         Calendar endTime = Calendar.getInstance();
-        endTime.set(end_year, (end_month-1), end_date, end_hour, end_minute);
+        if(allDay)
+        {
+            endTime.set(end_year, (end_month-1), (end_date+1), 0, 0);
+        }
+        else
+        {
+            endTime.set(end_year, (end_month-1), end_date, end_hour, end_minute);
+        }
         endMillis = endTime.getTimeInMillis();
 
 
@@ -111,8 +126,10 @@ public class MainActivity extends AppCompatActivity {
         values.put(CalendarContract.Events.DTEND, endMillis);
         values.put(CalendarContract.Events.TITLE, title);
         values.put(CalendarContract.Events.DESCRIPTION, description);
+        values.put(CalendarContract.Events.EVENT_LOCATION, location);
         values.put(CalendarContract.Events.CALENDAR_ID, calID);         // Calendar ID 6 für Events
         values.put(CalendarContract.Events.EVENT_TIMEZONE, eventTimeZone);
+        values.put(CalendarContract.Events.ALL_DAY, allday);
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) // App-Permission in den Einstellungen ändern
         {
             return;
