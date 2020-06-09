@@ -44,7 +44,7 @@
             android:layout_marginLeft="27dp"
             android:hint="@string/textfeldTerminVon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/kalender_placeholder" />
+            tools:layout_editor_absoluteY="490dp" />
 
         <EditText
             android:id="@+id/textfeldTerminBis"
@@ -55,7 +55,7 @@
             android:layout_marginRight="24dp"
             android:hint="@string/textfeldTerminBis"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/kalender_placeholder" />
+            tools:layout_editor_absoluteY="490dp" />
 
         <EditText
             android:id="@+id/textfeldTerminbeschreibung"
@@ -82,7 +82,6 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:hint="@string/textfeldTerminort"
-            app:layout_constraintBottom_toTopOf="@+id/kalender_placeholder"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textfeldTerminbeschreibung" />
@@ -151,17 +150,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/switchWoechentlich" />
 
-        <ImageView
-            android:id="@+id/kalender_placeholder"
-            android:layout_width="255dp"
-            android:layout_height="212dp"
-            android:src="@drawable/kalender_placeholder"
-            app:layout_constraintBottom_toTopOf="@+id/textfeldTerminVon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textfeldTermonort" />
-
         <Button
             android:id="@+id/button_third_previous"
             android:layout_width="wrap_content"
@@ -174,6 +162,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.976" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="360dp"
+            android:layout_height="268dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/textfeldTerminVon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textfeldTermonort" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
