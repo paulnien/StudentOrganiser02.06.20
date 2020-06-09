@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".KalenderFragment">
 
-
+<!-- test -->
         <TextView
             android:id="@+id/TextGanztaegig"
             android:layout_width="180dp"
