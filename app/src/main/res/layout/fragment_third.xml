@@ -42,20 +42,27 @@
 
             android:layout_marginStart="27dp"
             android:layout_marginLeft="27dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
             android:hint="@string/textfeldTerminVon"
+            app:layout_constraintEnd_toStartOf="@+id/textfeldTerminBis"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="490dp" />
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
         <EditText
             android:id="@+id/textfeldTerminBis"
             android:layout_width="160dp"
             android:layout_height="40dp"
 
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:hint="@string/textfeldTerminBis"
+            app:layout_constraintBottom_toTopOf="@+id/switchWoechentlich"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="490dp" />
+            app:layout_constraintStart_toEndOf="@+id/textfeldTerminVon"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
         <EditText
             android:id="@+id/textfeldTerminbeschreibung"
@@ -82,6 +89,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:hint="@string/textfeldTerminort"
+            app:layout_constraintBottom_toTopOf="@+id/calendarView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textfeldTerminbeschreibung" />
@@ -165,8 +173,8 @@
 
         <CalendarView
             android:id="@+id/calendarView"
-            android:layout_width="360dp"
-            android:layout_height="268dp"
+            android:layout_width="359dp"
+            android:layout_height="210dp"
             android:layout_marginStart="27dp"
             android:layout_marginLeft="27dp"
             android:layout_marginEnd="24dp"
