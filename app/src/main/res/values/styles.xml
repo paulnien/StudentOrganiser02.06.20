@@ -11,7 +11,7 @@
         <!--textfarbe testweise zu rot geändert um zu sehen wo es angewendet wird-->
         <item name="android:textAlignment">center</item>
         <!--Text zentriert darstellen? Test-->
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">20sp</item>
         <!--definiert Text größe-->
         <item name="android:textStyle">bold</item>
         <!--<item name="android:fontFamily">"@font/serif"</item>-->

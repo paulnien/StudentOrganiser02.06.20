@@ -20,4 +20,13 @@
     <string name="previous4">Zurück</string>
     <string name="hello_forth_fragment">Stundenplan</string>
     <string name="Mensaplan">Mensaplan</string>
+    <string name="textfeldTermintitel">Termintitel</string>
+    <string name="terminErstellen">Termin erstellen</string>
+    <string name="textfeldTerminbeschreibumg">Terminbeschreibung</string>
+    <string name="textfeldTerminort">Terminort</string>
+    <string name="textfeldTerminBis">Termin bis</string>
+    <string name="textfeldTerminVon">Termin von</string>
+    <string name="TextGanztaegig">Ganztägig</string>
+    <string name="TextWoechentlich">Wöchentlich</string>
+    <string name="Ganztaegig">Ganztägig</string>
 </resources>
