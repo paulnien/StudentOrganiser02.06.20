@@ -120,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
         endMillis = endTime.getTimeInMillis();
 
 
-
         ContentResolver cr = getContentResolver();
         ContentValues values = new ContentValues();
         values.put(CalendarContract.Events.DTSTART, startMillis);
