@@ -59,7 +59,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:hint="@string/textfeldTerminBis"
-            app:layout_constraintBottom_toTopOf="@+id/switchWoechentlich"
+            app:layout_constraintBottom_toTopOf="@+id/swt_daily"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textfeldTerminVon"
             app:layout_constraintTop_toBottomOf="@+id/calendarView" />
@@ -101,7 +101,7 @@
             android:layout_marginStart="27dp"
             android:layout_marginLeft="27dp"
             android:text="@string/TextWoechentlich"
-            app:layout_constraintBottom_toTopOf="@+id/button_third_previous2"
+            app:layout_constraintBottom_toTopOf="@id/createNewEvent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextGanztaegig" />
 
@@ -112,7 +112,7 @@
             android:layout_marginStart="27dp"
 
             android:layout_marginLeft="27dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="45dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:hint="@string/textfeldTermintitel"
@@ -123,24 +123,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Switch
-            android:id="@+id/switchWoechentlich"
+            android:id="@+id/swt_daily"
             android:layout_width="71dp"
             android:layout_height="30dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/switchGanztaegig2"
+            app:layout_constraintBottom_toTopOf="@+id/swt_weekly"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textfeldTerminBis" />
 
         <Switch
-            android:id="@+id/switchGanztaegig2"
+            android:id="@+id/swt_weekly"
             android:layout_width="71dp"
             android:layout_height="30dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/button_third_previous2"
+            app:layout_constraintBottom_toTopOf="@+id/createNewEvent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switchWoechentlich" />
+            app:layout_constraintTop_toBottomOf="@+id/swt_daily" />
 
         <Button
             android:id="@+id/button_third_previous"
