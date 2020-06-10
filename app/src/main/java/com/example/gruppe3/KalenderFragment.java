@@ -10,6 +10,8 @@ import android.provider.CalendarContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -40,16 +42,25 @@ public class KalenderFragment extends Fragment{
             }
         });
 
+        //title,description,location Textfield
+        textfeld_titel =(EditText)view.findViewById(R.id.textfeld_titel);
+        textfeldTerminbeschreibung =(EditText)view.findViewById(R.id.textfeldTerminbeschreibung);
+        textfeldTerminort =(EditText)view.findViewById(R.id.textfeldTerminort);
         //Event erstellen handleButton
         view.findViewById(R.id.createNewEvent).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-               calendar_input("Allday test123", "Testeintrag allday", "testlocation", "America/Los_Angeles", 6, 2020, 7, 20, 14, 15, 2020,7,20, 14,45, true, true);
+               calendar_input(textfeld_titel.getText().toString(), textfeldTerminbeschreibung.getText().toString(), textfeldTerminort.getText().toString(), "America/Los_Angeles", 6, 2020, 7, 20, 14, 15, 2020,7,20, 14,45, true, false);
             }
         });
     }
+    EditText textfeld_titel;
+    EditText textfeldTerminbeschreibung;
+    EditText textfeldTerminort;
+    CalendarView calendarView;
+
 
     public void calendar_input(String title, String description, String location, String eventTimeZone, long calID,int start_year, int start_month, int start_date, int start_hour, int start_minute, int end_year, int end_month, int end_date, int end_hour, int end_minute, boolean allDay, boolean weekly)
     {
