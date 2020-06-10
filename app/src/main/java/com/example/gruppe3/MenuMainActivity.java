@@ -16,30 +16,33 @@ import com.google.android.material.snackbar.Snackbar;
 
 
 
-public class MenuMainActivity extends AppCompatActivity {
-
+public class MenuMainActivity extends AppCompatActivity
+{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.menu.menu_main);
         // Toolbar toolbar = findViewById(R.id.toolbar);
         // setSupportActionBar(toolbar);
 
-        findViewById(R.id.link1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.link1).setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 clicked_btn("http://www.w-hs.de");
             }
         });
 
-        findViewById(R.id.link2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.link2).setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 clicked_btn("http://www.google.de");
             }
         });
-
-
     }
     public void clicked_btn(String url)
     {
@@ -48,6 +51,4 @@ public class MenuMainActivity extends AppCompatActivity {
         intent.setPackage("com.android.chrome");
         startActivity(intent);
     }
-
-
 }
