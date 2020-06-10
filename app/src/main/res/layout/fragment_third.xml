@@ -19,7 +19,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textfeldTerminVon" />
 
         <Button
-            android:id="@+id/button_third_previous2"
+            android:id="@+id/createNewEvent"
             android:layout_width="360dp"
             android:layout_height="40dp"
             android:layout_marginStart="27dp"
@@ -74,13 +74,13 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:hint="@string/textfeldTerminbeschreibumg"
-            app:layout_constraintBottom_toTopOf="@+id/textfeldTermonort"
+            app:layout_constraintBottom_toTopOf="@+id/textfeldTerminort"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textfeld_titel" />
 
         <EditText
-            android:id="@+id/textfeldTermonort"
+            android:id="@+id/textfeldTerminort"
             android:layout_width="360dp"
             android:layout_height="37dp"
             android:layout_marginStart="27dp"
@@ -166,7 +166,7 @@
             app:layout_constraintBottom_toTopOf="@+id/textfeldTerminVon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textfeldTermonort" />
+            app:layout_constraintTop_toBottomOf="@+id/textfeldTerminort" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
