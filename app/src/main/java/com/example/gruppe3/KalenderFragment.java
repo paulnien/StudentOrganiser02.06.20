@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,11 @@ import androidx.navigation.fragment.NavHostFragment;
 import java.util.Calendar;
 
 public class KalenderFragment extends Fragment{
+
+    //Funktion Deklaration
+    //variablen CalendarView
+    int jahr,monat,tag;
+    boolean is_clickedDay=false;
 
     @Override
     public View onCreateView(
@@ -46,13 +52,40 @@ public class KalenderFragment extends Fragment{
         textfeld_titel =(EditText)view.findViewById(R.id.textfeld_titel);
         textfeldTerminbeschreibung =(EditText)view.findViewById(R.id.textfeldTerminbeschreibung);
         textfeldTerminort =(EditText)view.findViewById(R.id.textfeldTerminort);
+        //CalendarView
+
+        calendarView=(CalendarView) view.findViewById(R.id.calendarView);
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener()
+        {
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth)
+            {
+                jahr=year;
+                monat=month+1;
+                tag=dayOfMonth;
+                is_clickedDay=true;
+                Log.d("DebugVariablen", "Variablen: "+String.valueOf(jahr)+" "+String.valueOf(monat)+" "+String.valueOf(tag));
+            }
+        });
+        //TimePicker
+
+
+        //
+
         //Event erstellen handleButton
         view.findViewById(R.id.createNewEvent).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-               calendar_input(textfeld_titel.getText().toString(), textfeldTerminbeschreibung.getText().toString(), textfeldTerminort.getText().toString(), "America/Los_Angeles", 6, 2020, 7, 20, 14, 15, 2020,7,20, 14,45, true, false);
+                if(is_clickedDay)
+                {
+                    calendar_input(textfeld_titel.getText().toString(), textfeldTerminbeschreibung.getText().toString(), textfeldTerminort.getText().toString(), "Europe/Berlin", 6, jahr, monat, tag, 14, 15, jahr, monat, tag, 14, 45, true, false);
+                    is_clickedDay=false;
+                    textfeld_titel.getText().clear();
+                    textfeldTerminbeschreibung.getText().clear();
+                    textfeldTerminort.getText().clear();
+                }
             }
         });
     }
