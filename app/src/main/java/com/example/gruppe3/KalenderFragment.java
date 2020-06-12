@@ -126,7 +126,7 @@ public class KalenderFragment extends Fragment
             {
                 if(is_clickedDay)
                 {
-                    calendar_input(textfeld_titel.getText().toString(), textfeldTerminbeschreibung.getText().toString(), textfeldTerminort.getText().toString(), "Europe/Berlin", 6, jahr, monat, tag, 14, 15, jahr, monat, tag, 14, 45, daily_isChecked, weekly_isChecked);
+                    calendar_input(textfeld_titel.getText().toString(), textfeldTerminbeschreibung.getText().toString(), textfeldTerminort.getText().toString(), "America/Los_Angeles", 6, jahr, monat, tag, 14, 15, jahr, monat, tag, 14, 45, daily_isChecked, weekly_isChecked);
                     is_clickedDay=false;
                     textfeld_titel.getText().clear();
                     textfeldTerminbeschreibung.getText().clear();
@@ -188,6 +188,7 @@ public class KalenderFragment extends Fragment
         {
             return;
         }
+        Log.d("Debug insert-method: ","Vor insert Command: \r\n title: "+title+"\r\n description: "+description+"\r\n location: "+location+"\r\n eventTimeZone: "+eventTimeZone+"\r\n calendarID: "+calID+"\r\n Jahr: "+start_year+"\r\n Monat: "+start_month+"\r\n Tag: "+start_date+"\r\n Stunde: "+start_hour+" \r\n Minute: "+start_minute+"\r\n AllDayEvent: "+allDay+"\r\n weekly: "+weekly);
         Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
     }
 }
