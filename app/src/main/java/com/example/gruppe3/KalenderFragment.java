@@ -126,7 +126,7 @@ public class KalenderFragment extends Fragment
             {
                 if(is_clickedDay)
                 {
-                    calendar_input(textfeld_titel.getText().toString(), textfeldTerminbeschreibung.getText().toString(), textfeldTerminort.getText().toString(), "America/Los_Angeles", 6, jahr, monat, tag, 14, 15, jahr, monat, tag, 14, 45, daily_isChecked, weekly_isChecked);
+                    calendar_input(textfeld_titel.getText().toString(), textfeldTerminbeschreibung.getText().toString(), textfeldTerminort.getText().toString(), "America/Los_Angeles", 1 /*muss angepasst werden!!!*/, jahr, monat, tag, 14, 15, jahr, monat, tag, 14, 45, daily_isChecked, weekly_isChecked);
                     is_clickedDay=false;
                     textfeld_titel.getText().clear();
                     textfeldTerminbeschreibung.getText().clear();
@@ -141,6 +141,8 @@ public class KalenderFragment extends Fragment
     public void calendar_input(String title, String description, String location, String eventTimeZone, long calID,int start_year, int start_month, int start_date, int start_hour, int start_minute, int end_year, int end_month, int end_date, int end_hour, int end_minute, boolean allDay, boolean weekly)
     {
         //insert methoden aufruf:   calendar_input("Allday test123", "Testeintrag allday", "testlocation", "America/Los_Angeles", 6, 2020, 7, 20, 14, 15, 2020,7,20, 14,45, true, true);
+
+        // Calendar ID scheinbar beliebig?
 
         long startMillis;
         long endMillis;
@@ -176,7 +178,7 @@ public class KalenderFragment extends Fragment
         values.put(CalendarContract.Events.TITLE, title);
         values.put(CalendarContract.Events.DESCRIPTION, description);
         values.put(CalendarContract.Events.EVENT_LOCATION, location);
-        values.put(CalendarContract.Events.CALENDAR_ID, calID);         // Calendar ID 6 für Events
+        values.put(CalendarContract.Events.CALENDAR_ID, calID);         // Calendar ID muss angepasst werden!!!
         values.put(CalendarContract.Events.EVENT_TIMEZONE, eventTimeZone);
         values.put(CalendarContract.Events.ALL_DAY, allday);
         if(weekly)
