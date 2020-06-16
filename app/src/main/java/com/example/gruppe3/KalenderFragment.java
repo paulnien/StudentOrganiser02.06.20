@@ -1,6 +1,7 @@
 package com.example.gruppe3;
 
 import android.Manifest;
+import android.app.TimePickerDialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.pm.PackageManager;
@@ -15,6 +16,7 @@ import android.widget.CalendarView;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TimePicker;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -23,7 +25,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import java.util.Calendar;
 
-public class KalenderFragment extends Fragment
+public class KalenderFragment extends Fragment implements TimePickerDialog.OnTimeSetListener
 {
 
     //Funktion Deklaration
@@ -39,6 +41,14 @@ public class KalenderFragment extends Fragment
     //variablen Switches
     boolean daily_isChecked=false;
     boolean weekly_isChecked=false;
+    //TimePicker on Time set Methode
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute)
+    {
+
+    }
+
+    //View Methoden
     @Override
     public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -79,7 +89,9 @@ public class KalenderFragment extends Fragment
                 Log.d("DebugVariablen", "Variablen: "+String.valueOf(jahr)+" "+String.valueOf(monat)+" "+String.valueOf(tag));
             }
         });
-        //TimePicker
+        //TimePicker buttons
+
+
 
 
         //daily_handler
