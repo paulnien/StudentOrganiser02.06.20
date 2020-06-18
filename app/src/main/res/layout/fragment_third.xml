@@ -7,6 +7,18 @@
     tools:context=".KalenderFragment">
 
 <!-- test -->
+
+        <Button
+            android:id="@+id/button_startzeit"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:text="@string/Zeit_Anfang"
+            android:theme="@style/AppTheme.Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
         <TextView
             android:id="@+id/TextGanztaegig"
             android:layout_width="180dp"
@@ -16,7 +28,7 @@
             android:text="@string/Ganztaegig"
             app:layout_constraintBottom_toTopOf="@+id/TextWoechentlich"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textfeldTerminVon" />
+            app:layout_constraintTop_toBottomOf="@+id/button_startzeit" />
 
         <Button
             android:id="@+id/createNewEvent"
@@ -34,35 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.89" />
-
-        <EditText
-            android:id="@+id/textfeldTerminVon"
-            android:layout_width="160dp"
-            android:layout_height="37dp"
-
-            android:layout_marginStart="27dp"
-            android:layout_marginLeft="27dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:hint="@string/textfeldTerminVon"
-            app:layout_constraintEnd_toStartOf="@+id/textfeldTerminBis"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
-
-        <EditText
-            android:id="@+id/textfeldTerminBis"
-            android:layout_width="160dp"
-            android:layout_height="37dp"
-
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:hint="@string/textfeldTerminBis"
-            app:layout_constraintBottom_toTopOf="@+id/swt_daily"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textfeldTerminVon"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
         <EditText
             android:id="@+id/textfeldTerminbeschreibung"
@@ -130,7 +113,7 @@
             android:layout_marginRight="24dp"
             app:layout_constraintBottom_toTopOf="@+id/swt_weekly"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textfeldTerminBis" />
+            app:layout_constraintTop_toBottomOf="@+id/button_Zeit_Ende" />
 
         <Switch
             android:id="@+id/swt_weekly"
@@ -155,6 +138,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.976" />
 
+        <Button
+            android:id="@+id/button_Zeit_Ende"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:text="@string/Zeit_Ende"
+            android:theme="@style/AppTheme.Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="360dp"
@@ -163,7 +157,6 @@
             android:layout_marginLeft="27dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/textfeldTerminVon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textfeldTerminort" />
