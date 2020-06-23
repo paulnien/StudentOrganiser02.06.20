@@ -8,14 +8,14 @@
 
 <!-- test -->
 
-        <Button
-            android:id="@+id/button_startzeit"
+        <EditText
+            android:id="@+id/textfeld_startzeit"
             android:layout_width="180dp"
             android:layout_height="40dp"
             android:layout_marginStart="27dp"
             android:layout_marginLeft="27dp"
             android:text="@string/Zeit_Anfang"
-            android:theme="@style/AppTheme.Button"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
@@ -28,7 +28,7 @@
             android:text="@string/Ganztaegig"
             app:layout_constraintBottom_toTopOf="@+id/TextWoechentlich"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_startzeit" />
+            app:layout_constraintTop_toBottomOf="@+id/textfeld_startzeit" />
 
         <Button
             android:id="@+id/createNewEvent"
@@ -111,19 +111,18 @@
             android:layout_height="30dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/swt_weekly"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_Zeit_Ende" />
+            app:layout_constraintTop_toBottomOf="@+id/textfeld_Zeit_Ende" />
 
         <Switch
             android:id="@+id/swt_weekly"
             android:layout_width="71dp"
             android:layout_height="30dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
             app:layout_constraintBottom_toTopOf="@+id/createNewEvent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/swt_daily" />
+            app:layout_constraintTop_toBottomOf="@+id/swt_daily"
+            tools:layout_editor_absoluteX="317dp" />
 
         <Button
             android:id="@+id/button_third_previous"
@@ -138,14 +137,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.976" />
 
-        <Button
-            android:id="@+id/button_Zeit_Ende"
+        <EditText
+            android:id="@+id/textfeld_Zeit_Ende"
             android:layout_width="180dp"
             android:layout_height="40dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
+
             android:text="@string/Zeit_Ende"
-            android:theme="@style/AppTheme.Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
